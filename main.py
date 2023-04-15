@@ -12,25 +12,25 @@ def calc0():
         calc_file0.append(b)
 
 
-def calc1():
+def write_calc1():
     calc0()
     with open("calc1.txt", mode="w") as file_txt1:
         file_txt1.write(str(calc_file0))
 
 
-def calc2():
+def write_calc2():
     calc0()
     with open("calc2.txt", mode="w") as file_txt2:
         file_txt2.write(str(calc_file0))
 
 
-def calc3():
+def write_calc3():
     calc0()
     with open("calc3.txt", mode="w") as file_txt3:
         file_txt3.write(str(calc_file0))
 
 
-def calc4():
+def write_calc4():
     calc0()
     with open("calc4.txt", mode="w") as file_txt4:
         file_txt4.write(str(calc_file0))
@@ -38,8 +38,8 @@ def calc4():
 
 if __name__ == '__main__':
 
-    thread1 = threading.Thread(target=calc1)
-    thread2 = threading.Thread(target=calc2)
+    thread1 = threading.Thread(target=write_calc1)
+    thread2 = threading.Thread(target=write_calc2)
 
     datetime1 = datetime.datetime.now()
     thread1.start()
@@ -51,8 +51,8 @@ if __name__ == '__main__':
     datetime2 = datetime.datetime.now()
     print(datetime2 - datetime1)
 
-    proces3 = Process(target=calc3)
-    proces4 = Process(target=calc4)
+    proces3 = Process(target=write_calc3)
+    proces4 = Process(target=write_calc4)
 
     datetime1 = datetime.datetime.now()
 
